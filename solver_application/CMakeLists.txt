@@ -25,4 +25,4 @@ set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Nightmare")
 set(CPACK_PACKAGE_DESCRIPTION "What's up, guys? :-)")
 set(CPACK_GENERATOR "DEB" "RPM")
 include(CPack)
-#cmake . && cmake --build . && cmake --build . --target package_source
+cmake . && cmake --build . && cmake --build . --target package_source
