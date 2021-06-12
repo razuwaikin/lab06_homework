@@ -1,3 +1,4 @@
+
 language: cpp
 
 script:
@@ -6,17 +7,20 @@ script:
 - cmake . && cmake --build . && cmake --build . --target package_source
 
 addons:
-apt:
-  sources:
-    - george-edison55-precise-backports
-  packages:
-    - cmake
-    - cmake-data
-    - mingw-w64
-    - rpm
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake
+      - cmake-data
+      - mingw-w64
+      - rpm
 
 deploy:
-provider: releases
-skip_cleanup: true
-on:
-  tags: true
+  provider: releases
+  api_key:
+   secure: $GITHUB_TOKEN
+  file: /home/travis/build/Berendei-Jr/lab06/solver_application/solver-0.1.1-Source.tar.Z
+  skip_cleanup: true
+  on:
+    tags: true
