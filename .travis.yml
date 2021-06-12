@@ -1,3 +1,4 @@
+language: cpp
 
 script:
 - cd solver_application/
@@ -13,3 +14,4 @@ apt:
     - cmake-data
     - mingw-w64
     - rpm
+deploy:
