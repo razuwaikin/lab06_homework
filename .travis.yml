@@ -14,11 +14,9 @@ apt:
     - cmake-data
     - mingw-w64
     - rpm
+
 deploy:
- provider: releases
- api_key:
-  secure: $GITHUB_TOKEN
-  file: /home/travis/build/razuwaikin/lab06_homework/solver_application/solver-0.1.1-Source.tar.Z
-  skip_cleanup: true
-  on:
-    tags: true
+provider: releases
+skip_cleanup: true
+on:
+  tags: true
