@@ -2,6 +2,7 @@
 [![Build Status](https://www.travis-ci.com/razuwaikin/lab06_homework.svg?branch=main)](https://www.travis-ci.com/razuwaikin/lab06_homework)
 
 # Updated CMakeLists.txt
+```
 cmake_minimum_required(VERSION 3.1)
 add_definitions(-std=c++0x)
 project(S)
@@ -26,9 +27,10 @@ set(CPACK_PACKAGE_DESCRIPTION "What's up, guys? :-)")
 set(CPACK_GENERATOR "DEB" "RPM")
 
 include(CPack)
+```
 
 # Updated .travis.yml
-
+```
 language: cpp
 
 script:
@@ -51,3 +53,4 @@ provider: releases
 skip_cleanup: true
 on:
   tags: true
+```
